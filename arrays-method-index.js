@@ -159,3 +159,62 @@ let soldiers = candidates.filter( army.canJoinArmy, army)
 console.log(soldiers)
 
 
+
+console.log("-----------------------tasks---------------------")
+// task -1 
+const camelize = (str)=>{
+let arr = str.split('-')  
+  console.log(arr)
+let camelized = arr.map((x)=> x[0].toUpperCase() + x.slice(1))
+// camelized = 
+return camelized.join('')
+}
+console.log(camelize("background-color"))
+
+// task -2
+
+  function filterRange(arr,a,b){
+  let filetredArray =   arr.filter((x)=> x<=b)
+    return filetredArray.filter(x => x>=a)
+  }
+
+let arr = [1,3,4,6,8,14,52]
+console.log(filterRange(arr,2,9))
+
+// task-3
+console.log("task-3")
+arr = [1,2,3,3436,43,2,5,7,2,346,354,35,232,43]
+const filterRangeInPlace = (arr,a,b)=>{
+for(i=0;i<arr.length;i++){
+  let element = arr[i]
+  if(element<a || element > b){
+    arr.splice(i,1)
+    i = i-1
+  }
+}
+}
+filterRangeInPlace(arr,1,9)
+console.log(arr)
+
+// task-4
+
+console.log('task-4')
+
+arr = [5, 2, 1, -10, 8];
+arr.sort((a,b) => {return b - a})
+console.log(arr)
+
+
+// task-5
+
+console.log('task-5')
+
+ arr = ["HTML", "JavaScript", "CSS"];
+function copingSortedArray(arr){
+  let copiedArray = arr
+  let sorted = copiedArray.sort()
+  return sorted
+}
+console.log(arr)
+console.log(copingSortedArray(arr))
+
